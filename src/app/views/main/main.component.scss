@@ -1,0 +1,221 @@
+@import '../../../assets/scss/colors.scss';
+.container {
+  position: relative;
+  height: 100vh;
+  background-color: #ffffff;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .open-btn {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+  }
+  
+  .open-btn i {
+    margin-right: 5px;
+  }
+  
+  .cart-item-count {
+    background-color: $warn-color;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+  
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 0.95;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f8f9fa;
+    background-color: #e5e5e5;
+    padding: 10px;
+  }
+
+  .carousel::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  .carousel::-webkit-scrollbar-thumb {
+    background-color: #13104c;
+    border-radius: 4px;
+  }
+  
+  .carousel::-webkit-scrollbar-track {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+  }
+
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #000;
+  }
+  
+  .carousel-nav.left {
+    left: 0;
+  }
+  
+  .carousel-nav.right {
+    right: -15px;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 480px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    scroll-snap-align: start;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+  }  
+  
+  .slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .slide h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+
+  .slide p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .cart-quantity-input {
+    padding: 8px;
+    width: 60px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: #999;
+  }
+  
+  .cart-quantity-input:hover,
+  .cart-quantity-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+  }
+  
+  .quantity-input .quantity-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .product-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .product-menu button {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .product-menu button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .product-menu button i {
+    margin-right: 4px;
+  }
+  
+  .product-menu .details-button {
+    color: #007bff;
+  }
+  
+  .product-menu .cart-button {
+    color: #28a745;
+  }
+ 
+  .paginator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .paginator button,
+  .paginator select {
+    margin: 0 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #13104c;
+    cursor: pointer;
+  }
+  
+  .paginator select {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .paginator label {
+    margin-right: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .paginator button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  .modal-op{
+    opacity: 0.3;
+  }

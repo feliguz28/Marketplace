@@ -1,0 +1,26 @@
+<div class="sidenav" [class.open]="isOpen">
+  <div class="sidenav-header">
+    <span class="close-icon" (click)="closeSidenav()">&times;</span>
+    <h2>Cantidad Productos ({{ cartItemCount }})</h2>
+  </div>
+  <div class="sidenav-content">
+    <h2>Lista de productos</h2>
+    <div class="product-list">
+      <ul>
+        <li *ngFor="let item of cartItems">
+          {{ item.title }} - Cantidad: {{ item.quantity }}
+          <button (click)="decreaseQuantity(item)">-</button>
+          <button (click)="increaseQuantity(item)">+</button>
+          <button (click)="removeFromCart(item)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="download-buttons">
+      <button *ngIf="cartItemCount > 0" class="download-button" (click)="downloadProducts('csv')">Descargar CSV</button>
+      <button *ngIf="cartItemCount > 0" class="download-button" (click)="downloadProducts('xls')">Descargar XLS</button>
+      <button *ngIf="cartItemCount > 0" class="download-button" (click)="downloadProducts('xlsx')">Descargar XLSX</button>
+    </div>
+  </div>
+</div>

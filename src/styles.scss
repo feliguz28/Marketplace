@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/colors.scss';
+
+@font-face {
+    font-family: 'customFont';
+    src: url('assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  }
+
+  body {
+    font-family: 'customFont';
+    font-size: medium;
+    margin: 0;
+  }  
+
+my-button {
+    background-color: $primary-color;
+    color: $contrast-color;
+    border-radius: 2px;
+  }

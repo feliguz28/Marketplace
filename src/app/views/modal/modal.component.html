@@ -1,0 +1,23 @@
+<div class="modal" (click)="closeModal()">
+  <div class="modal-content" (click)="stopPropagation($event)">
+    <span class="close-icon" (click)="closeModal()">&times;</span>
+    <h2>{{ product?.title }}</h2>
+    <p>Price: {{ product?.price }}</p>
+    <p>Description: {{ product?.description }}</p>
+
+    <div>
+      <p>Category ID: {{ product?.category?.id }}</p>
+      <p>Category Name: {{ product?.category?.name }}</p>
+      <img [src]="product?.category?.image" alt="Category Image" *ngIf="product?.category?.image">
+    </div>
+
+    <div>
+      <p>Images:</p>
+      <ul>
+        <li *ngFor="let image of product?.images">
+          <img [src]="image" alt="Product Image">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
